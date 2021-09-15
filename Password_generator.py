@@ -12,6 +12,7 @@ while True :
             password = password + password_char
 
         print("Here is your passwowrd :" + str(password)) 
+    exit()    
        
 
 
