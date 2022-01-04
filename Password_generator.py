@@ -12,9 +12,10 @@ while True :
             password = password + password_char
 
         print("Here is your passwowrd :" + str(password)) 
-    exit()    
-       
-
+    print("\n")    
+    need_more = input("Need more?(y/n)")
+    if(need_more != "y"):
+        exit()
 
 
 
