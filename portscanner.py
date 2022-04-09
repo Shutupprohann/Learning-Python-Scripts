@@ -6,7 +6,7 @@ print(pyfiglet.figlet_format('Portscanner'))
 ip = sys.argv[1]
 open_ports = []
 
-port_range  = range(65535)
+port_range  = range(1,1024)
 
 def probe_port(ip,port,result=1):
 	try:
